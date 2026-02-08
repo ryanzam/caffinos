@@ -28,13 +28,13 @@ const HeroSection = () => {
             id="home"
             ref={heroRef}
             className="relative min-h-screen flex items-center justify-center overflow-hidden"
-            aria-label="Welcome to Fareena's Cafe"
+            aria-label="Welcome to Caffinos"
         >
             {/* Background */}
             <div className="absolute inset-0">
                 <img
                     src={heroImage}
-                    alt="Fareena's Cafe - cozy coffee bar with steaming latte art in Bharatpur, Chitwan"
+                    alt="Caffinos - cozy coffee bar with steaming latte art in Bharatpur, Chitwan"
                     className="w-full h-full object-cover"
                     loading="eager"
                 />
@@ -46,15 +46,15 @@ const HeroSection = () => {
 
             {/* Content */}
             <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-                <p className="text-white font-body text-sm md:text-base uppercase tracking-[0.3em] text-cream/70 mb-4 opacity-0">
+                <p className="hero-slogan font-body text-sm md:text-base uppercase tracking-[0.3em] text-cream/70 mb-4 opacity-0">
                     ☕ Everything gets better with coffee
                 </p>
-                <h1 className="text-neutral-500 font-display text-5xl md:text-7xl lg:text-8xl font-bold text-cream leading-[0.95] mb-6 opacity-0">
+                <h1 className="hero-title font-display text-5xl md:text-7xl lg:text-8xl font-bold text-cream leading-[0.95] mb-6 opacity-0">
                     Welcome to
                     <br />
                     <span className="text-gradient italic">Caffinos</span>
                 </h1>
-                <p className="text-neutral-400 font-body text-lg md:text-xl text-cream/80 max-w-2xl mx-auto mb-10 leading-relaxed opacity-0">
+                <p className="hero-tagline font-body text-lg md:text-xl text-cream/80 max-w-2xl mx-auto mb-10 leading-relaxed opacity-0">
                     Your go-to spot for handcrafted drinks and unmatched vibes in Chitwan, Nepal.
                 </p>
                 <div className="hero-buttons flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0">

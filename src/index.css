@@ -2,6 +2,37 @@
 
 @import "tailwindcss";
 
+@theme {
+  --color-primary: hsl(23, 62%, 19%);
+  --color-secondary: hsl(24, 55%, 28%);
+  --color-accent: hsl(49, 69%, 75%);
+
+  --gradient-section: linear-gradient(180deg, hsl(35, 40%, 96%) 0%, hsl(33, 35%, 93%) 100%);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-cream {
+  color: var(--color-accent);
+}
+
+.hero-slogan,
+.hero-title,
+.hero-tagline {
+  color: hsl(35, 40%, 96%);
+}
+
+.bg-card {
+  background-color: white;
+  border-color: var(--color-accent);
+}
+
 @layer base {
   :root {
     --background: 35 40% 96%;
@@ -97,12 +128,12 @@
   .section-title {
     font-family: var(--font-display);
     @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
-    color: hsl(var(--foreground));
+    color: hsl(var(--coffee-dark));
   }
 
   .section-subtitle {
     @apply text-base md:text-lg max-w-2xl mx-auto mt-4;
-    color: hsl(var(--muted-foreground));
+    color: hsl(var(--coffee-medium));
   }
 
   .text-gradient {
@@ -153,11 +184,5 @@
     content: '';
     @apply h-px flex-1;
     background: hsl(var(--border));
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
   }
 }
