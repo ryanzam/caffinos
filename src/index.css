@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Lato:wght@300;400;700;900&display=swap');
+
+@import "tailwindcss";
+
+
+
+@layer base {
+  :root {
+    --background: 35 40% 96%;
+    --foreground: 24 40% 12%;
+
+    --card: 33 35% 97%;
+    --card-foreground: 24 40% 12%;
+
+    --popover: 33 35% 97%;
+    --popover-foreground: 24 40% 12%;
+
+    --primary: 24 55% 28%;
+    --primary-foreground: 36 45% 95%;
+
+    --secondary: 32 30% 88%;
+    --secondary-foreground: 24 40% 15%;
+
+    --muted: 30 20% 92%;
+    --muted-foreground: 24 15% 45%;
+
+    --accent: 150 30% 28%;
+    --accent-foreground: 150 10% 95%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 20% 86%;
+    --input: 30 20% 86%;
+    --ring: 24 55% 28%;
+
+    --radius: 0.5rem;
+
+    /* Custom cafe tokens */
+    --coffee-dark: 24 60% 18%;
+    --coffee-medium: 24 45% 35%;
+    --coffee-light: 30 35% 55%;
+    --cream: 36 50% 94%;
+    --warm-gold: 38 70% 55%;
+    --deep-red: 0 55% 38%;
+    --forest-green: 150 30% 28%;
+
+    --gradient-hero: linear-gradient(180deg, hsla(24, 60%, 8%, 0.75) 0%, hsla(24, 60%, 8%, 0.4) 50%, hsla(24, 60%, 8%, 0.75) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(24, 55%, 28%) 0%, hsl(38, 70%, 55%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(35, 40%, 96%) 0%, hsl(33, 35%, 93%) 100%);
+
+    --shadow-warm: 0 10px 40px -10px hsla(24, 55%, 28%, 0.2);
+    --shadow-card: 0 4px 20px -4px hsla(24, 40%, 20%, 0.1);
+    --shadow-elevated: 0 20px 60px -15px hsla(24, 40%, 20%, 0.2);
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-transparent text-neutral-900;
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-20 md:px-12 lg:px-20 lg:py-28;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+    color: hsl(var(--foreground));
+  }
+
+  .section-subtitle {
+    @apply text-base md:text-lg max-w-2xl mx-auto mt-4;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .text-gradient {
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .btn-primary-cafe {
+    background: var(--gradient-warm);
+    @apply text-neutral-800 px-8 py-3 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300;
+    box-shadow: var(--shadow-warm);
+  }
+
+  .btn-primary-cafe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 44px -10px hsla(24, 55%, 28%, 0.35);
+  }
+
+  .btn-outline-cafe {
+    @apply px-8 py-3 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 border-2;
+    border-color: hsl(var(--primary-foreground));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .btn-outline-cafe:hover {
+    background: hsl(var(--primary-foreground));
+    color: hsl(var(--primary));
+  }
+
+  .divider-coffee {
+    @apply flex items-center justify-center gap-4 my-8;
+  }
+
+  .divider-coffee::before,
+  .divider-coffee::after {
+    content: '';
+    @apply h-px flex-1;
+    background: hsl(var(--border));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
