@@ -45,7 +45,7 @@ const Header = () => {
                     aria-label="Caffinos - Home"
                 >
                     <Coffee
-                        className={`w-7 h-7 transition-colors duration-300 ${isScrolled ? "text-gray-500" : "text-gray-200"
+                        className={`w-7 h-7 transition-colors duration-300 ${isScrolled ? "text-primary" : "text-accent"
                             }`}
                     />
                     <span
