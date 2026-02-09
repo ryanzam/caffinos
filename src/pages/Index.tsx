@@ -3,6 +3,7 @@ import HeroSection from '../components/HeroSection'
 import AboutSection from '../components/About'
 import MenuSection from '../components/MenuSection'
 import Gallery from '../components/Gallery'
+import Testimonial from '../components/Testimonial'
 
 const Index = () => {
     return (
@@ -13,6 +14,7 @@ const Index = () => {
                 <AboutSection />
                 <MenuSection />
                 <Gallery />
+                <Testimonial />
             </main>
         </div>
     )
