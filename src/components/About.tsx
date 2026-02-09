@@ -88,7 +88,7 @@ const AboutSection = () => {
                             More Than Just Coffee
                         </h3>
                         <p className="font-body text-secondary leading-relaxed mb-6">
-                            Nestled in the heart of Bharatpur, Chitwan, Fareena's Cafe is your sanctuary for handcrafted beverages and warm hospitality. We believe that every cup of coffee is an experience — from our meticulous V60 pour-overs to our refreshing cold Americanos.
+                            Nestled in the heart of Bharatpur, Chitwan, Caffinos is your sanctuary for handcrafted beverages and warm hospitality. We believe that every cup of coffee is an experience — from our meticulous V60 pour-overs to our refreshing cold Americanos.
                         </p>
                         <p className="font-body text-secondary leading-relaxed mb-8">
                             Whether you're here for a quiet morning brew, a catch-up with friends, or simply to soak in the cozy vibes, we promise an atmosphere that makes everything better with coffee.

@@ -49,7 +49,7 @@ const Header = () => {
                             }`}
                     />
                     <span
-                        className={`font-display text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300 ${isScrolled ? "text-gray-500" : "text-gray-200"
+                        className={`font-display text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300 ${isScrolled ? "text-secondary" : "text-white"
                             }`}
                     >
                         Caffinos
@@ -63,7 +63,7 @@ const Header = () => {
                             key={link.href}
                             href={link.href}
                             onClick={(e) => handleNavClick(e, link.href)}
-                            className={`text-sm font-body font-bold uppercase tracking-widest transition-colors duration-300 hover:text-warm-gold ${isScrolled ? "text-gray-500" : "text-gray-200"
+                            className={`text-sm font-body font-bold uppercase tracking-widest transition-colors duration-300 hover:text-yellow-600 ${isScrolled ? "text-secondary" : "text-white"
                                 }`}
                         >
                             {link.label}
@@ -75,7 +75,7 @@ const Header = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Facebook"
-                            className={`transition-colors duration-300 hover:text-warm-gold ${isScrolled ? "text-gray-500" : "text-gray-200"
+                            className={`transition-colors duration-300 hover:text-yellow-600 ${isScrolled ? "text-secondary" : "text-white"
                                 }`}
                         >
                             <Facebook className="w-4 h-4" />
@@ -85,7 +85,7 @@ const Header = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Instagram"
-                            className={`transition-colors duration-300 hover:text-warm-gold ${isScrolled ? "text-gray-500" : "text-gray-200"
+                            className={`transition-colors duration-300 hover:text-yellow-600 ${isScrolled ? "text-secondary" : "text-white"
                                 }`}
                         >
                             <Instagram className="w-4 h-4" />
@@ -95,7 +95,7 @@ const Header = () => {
 
                 {/* Mobile Toggle */}
                 <button
-                    className={`md:hidden transition-colors duration-300 ${isScrolled ? "text-gray-500" : "text-gray-200"
+                    className={`md:hidden transition-colors duration-300 ${isScrolled ? "text-secondary" : "text-white"
                         }`}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
@@ -114,16 +114,16 @@ const Header = () => {
                                 key={link.href}
                                 href={link.href}
                                 onClick={(e) => handleNavClick(e, link.href)}
-                                className="text-sm font-body font-bold uppercase tracking-widest text-white hover:text-gray-500 transition-colors py-2"
+                                className="text-sm font-body font-bold uppercase tracking-widest text-amber-500 hover:text-amber-800 transition-colors py-2"
                             >
                                 {link.label}
                             </a>
                         ))}
                         <div className="flex items-center gap-4 pt-4 border-t border-border">
-                            <a href="https://facebook.com/fareenas_cafe" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white hover:text-gray-500">
+                            <a href="https://facebook.com/fareenas_cafe" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-amber-500 hover:text-amber-800">
                                 <Facebook className="w-5 h-5" />
                             </a>
-                            <a href="https://instagram.com/fareenas_cafe" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white hover:text-gray-500">
+                            <a href="https://instagram.com/fareenas_cafe" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-amber-500 hover:text-amber-800">
                                 <Instagram className="w-5 h-5" />
                             </a>
                         </div>
