@@ -4,6 +4,7 @@ import AboutSection from '../components/About'
 import MenuSection from '../components/MenuSection'
 import Gallery from '../components/Gallery'
 import Testimonial from '../components/Testimonial'
+import Contact from '../components/Contact'
 
 const Index = () => {
     return (
@@ -15,6 +16,7 @@ const Index = () => {
                 <MenuSection />
                 <Gallery />
                 <Testimonial />
+                <Contact />
             </main>
         </div>
     )
